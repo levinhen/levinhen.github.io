@@ -1,198 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>个人博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="个人博客">
-<meta property="og:url" content="https://levinhen.github.io/index.html">
-<meta property="og:site_name" content="个人博客">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="Levinhen">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="个人博客" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+{% extends '_layout.swig' %}
+{% import '_macro/post.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+{% block title %}{{ config.title }}{% if theme.index_with_subtitle and config.subtitle %} - {{config.subtitle }}{% endif %}{% endblock %}
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+{% block page_class %}
+  {% if is_home() %} page-home {% endif %}
+{% endblock %}
 
-  
-<meta name="generator" content="Hexo 5.3.0"></head>
+{% block content %}
+  <section id="posts" class="posts-expand">
+    {% for post in page.posts %}
+      {{ post_template.render(post, true) }}
+    {% endfor %}
+  </section>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">个人博客</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://levinhen.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
+  {% include '_partials/pagination.swig' %}
+{% endblock %}
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/01/14/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2021-01-14T13:21:30.575Z" itemprop="datePublished">2021-01-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="写在最前面"><a href="#写在最前面" class="headerlink" title="写在最前面"></a>写在最前面</h2><hr>
-<h3 id="记录在blog创建过程中出现的问题"><a href="#记录在blog创建过程中出现的问题" class="headerlink" title="记录在blog创建过程中出现的问题"></a>记录在blog创建过程中出现的问题</h3><p>首先，当然是blog的创立，我参考了很多，最后决定使用github的github pages服务，具体则是依靠Hexo建立的站点。</p>
-<p>github pages可以使用Git来控制，不得不说这是相当方便了。</p>
-<p>使用Hexo的过程在这：</p>
-<p><code>npm install -g hexo-cli</code>  在这里可以选择是否局部安装<code>hexo</code>包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>就几句简单的命令而已，随后再安装<code>hexo</code>的<code>git</code>安装包部分就完全OK了。之后的步骤就是配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repository: https:&#x2F;&#x2F;github.com&#x2F;levinhen&#x2F;levinhen.github.io.git</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
-<p>我是认为只需要将网站文件夹放到<code>master branch</code>就好了，<del>反正也不会去看repository不是吗?</del></p>
-<p>至于后面的问题，关于主题更换、搜索栏、还有一些使用方法的记录，<del>等我想起来的时候再整吧。</del></p>
-<h3 id="过程中间关于使用ssh与github建立连接的问题"><a href="#过程中间关于使用ssh与github建立连接的问题" class="headerlink" title="过程中间关于使用ssh与github建立连接的问题"></a>过程中间关于使用ssh与github建立连接的问题</h3><p>我在过程当中不知道为什么走岔路去使用ssh连接github了，看<a target="_blank" rel="noopener" href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh">官方文档</a>就能解决绝大部分问题了。我在将ssh秘钥添加到ssh-agent的时候后曾经有一个小问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Could not open a connection to your authentication agent</span><br><span class="line">只需要执行下列语句就可以顺利添加了：</span><br><span class="line">ssh-agent bash</span><br></pre></td></tr></table></figure>
-<p>在中间，我的<code>git bash</code>的home位置不知道为什么是我之前做数电实验的<code>cadence</code>那儿，很奇怪。</p>
-<h3 id="“生活小妙招”"><a href="#“生活小妙招”" class="headerlink" title="“生活小妙招”"></a>“生活小妙招”</h3><p>顺便记录一下“生活小妙招”，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">有一些文件删不掉，需要权限，只需要移动到C盘的&#96;Program Files&#96;就可以直接删掉了</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://levinhen.github.io/2021/01/14/hello-world/" data-id="ckjwxaiq80000l4580urd0yi4" data-title="" class="article-share-link">Teilen</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/01/14/hello-world/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2021 Levinhen<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+{% block sidebar %}
+  {{ sidebar_template.render(false) }}
+{% endblock %}
