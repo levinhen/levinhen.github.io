@@ -22,18 +22,20 @@
     var CONFIG = {"hostname":"levinhen.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="GOD&#39;S IN HIS HEAVEN, ALL&#39;S RIGHT WITH THE WORLD.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="个人博客">
-<meta property="og:url" content="https://levinhen.github.io/archives/2021/index.html">
+  <meta name="description" content="这是在学习算法(第4版)里遇到的一些比较重要的知识点。 Java篇抽象数据类型的实现每个java类都至少含有一个构造函数，且其中的实例变量像是在一个普通的函数(C++)中的全局变量，但是是对每一个实例对象而言的。 关于api的考量，只为用例提供它们所需要的，这是设计api的指导思想。而在整个算法书中并不会使用接口继承，为了便于理解。但使用接口能方便进行比较和迭代。 Java的一个特点就是它不允许修">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java相关知识">
+<meta property="og:url" content="https://levinhen.github.io/2021/02/02/java%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="GOD&#39;S IN HIS HEAVEN, ALL&#39;S RIGHT WITH THE WORLD.">
+<meta property="og:description" content="这是在学习算法(第4版)里遇到的一些比较重要的知识点。 Java篇抽象数据类型的实现每个java类都至少含有一个构造函数，且其中的实例变量像是在一个普通的函数(C++)中的全局变量，但是是对每一个实例对象而言的。 关于api的考量，只为用例提供它们所需要的，这是设计api的指导思想。而在整个算法书中并不会使用接口继承，为了便于理解。但使用接口能方便进行比较和迭代。 Java的一个特点就是它不允许修">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-02-02T03:22:22.000Z">
+<meta property="article:modified_time" content="2021-02-02T16:58:23.526Z">
 <meta property="article:author" content="Levinhen">
 <meta property="article:tag" content="NexT">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://levinhen.github.io/archives/2021/">
+<link rel="canonical" href="https://levinhen.github.io/2021/02/02/java%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
 
 
 <script id="page-configurations">
@@ -41,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh_CN'
   };
 </script>
 
-  <title>Archive | 个人博客</title>
+  <title>java相关知识 | 个人博客</title>
   
 
 
@@ -168,150 +170,93 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 6 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="https://levinhen.github.io/2021/02/02/java%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levinhen">
+      <meta itemprop="description" content="GOD'S IN HIS HEAVEN, ALL'S RIGHT WITH THE WORLD.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          java相关知识
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-02-02 11:22:22" itemprop="dateCreated datePublished" datetime="2021-02-02T11:22:22+08:00">2021-02-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-02-03 00:58:23" itemprop="dateModified" datetime="2021-02-03T00:58:23+08:00">2021-02-03</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-02-03T21:26:41+08:00"
-              content="2021-02-03">
-          02-03
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/02/03/%E7%AE%97%E6%B3%95%E9%A2%98%E5%B0%8F%E7%BB%93/" itemprop="url">
-            <span itemprop="name">算法题小结</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-02-03T14:19:49+08:00"
-              content="2021-02-03">
-          02-03
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/02/03/C-%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" itemprop="url">
-            <span itemprop="name">C++相关知识</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-02-02T11:22:22+08:00"
-              content="2021-02-02">
-          02-02
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/02/02/java%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" itemprop="url">
-            <span itemprop="name">java相关知识</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-01-25T16:37:43+08:00"
-              content="2021-01-25">
-          01-25
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/01/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url">
-            <span itemprop="name">操作系统</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-01-16T11:23:33+08:00"
-              content="2021-01-16">
-          01-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/01/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" itemprop="url">
-            <span itemprop="name">数据结构与算法总结（一）</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-01-14T21:21:30+08:00"
-              content="2021-01-14">
-          01-14
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/01/14/hello-world/" itemprop="url">
-            <span itemprop="name">Untitled</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <p>这是在学习算法(第4版)里遇到的一些比较重要的知识点。</p>
+<h2 id="Java篇"><a href="#Java篇" class="headerlink" title="Java篇"></a>Java篇</h2><h4 id="抽象数据类型的实现"><a href="#抽象数据类型的实现" class="headerlink" title="抽象数据类型的实现"></a>抽象数据类型的实现</h4><p>每个java类都至少含有一个构造函数，且其中的实例变量像是在一个普通的函数(C++)中的全局变量，但是是对每一个实例对象而言的。</p>
+<p>关于api的考量，只为用例提供它们所需要的，这是设计api的指导思想。而在整个算法书中并不会使用接口继承，为了便于理解。但使用接口能方便进行比较和迭代。</p>
+<p>Java的一个特点就是它不允许修改引用的策略，这种策略使Java能高效自动地回收垃圾。且有一个关键字<code>final</code>类似于C++的<code>const</code>，猜测由于没有指针的存在，故也没有顶层与底层的区别？但是感觉Java的引用和C++的指针在某些地方又有些重合的意味，有待深究。<br>姑且得到了答案，Java的引用被称作<strong>安全指针</strong>。因为对引用的创建于改变的方法都只有一种所以称为安全指针。</p>
+<p>关于定容栈，书中提到Java是无法创建泛型数组的，需要使用类型转换，可是，难以理解这一段代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=(Item[]) <span class="keyword">new</span> Object[cap];</span><br></pre></td></tr></table></figure>
+<p>书中提到了实现动态数组就是增与减，但是我觉得邓公的书更完善，并不一定每种情况的增量都是两倍，有些时候的确加固定值会更好。</p>
+<h3 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h3><p>在给VS Code安装Java环境的时候，遇到了版本不匹配的问题，需要把旧版本删了，推荐用官方的删除工具，能把Java的高速缓存也清空了。<a target="_blank" rel="noopener" href="https://www.java.com/zh-CN/download/uninstalltool.jsp">官网卸载工具</a></p>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="prev" title="操作系统">
+      <i class="fa fa-chevron-left"></i> 操作系统
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/02/03/C-%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" rel="next" title="C++相关知识">
+      C++相关知识 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -364,6 +309,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java%E7%AF%87"><span class="nav-number">1.</span> <span class="nav-text">Java篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.0.1.</span> <span class="nav-text">抽象数据类型的实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">相关问题</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
