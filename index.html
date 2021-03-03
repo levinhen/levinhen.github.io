@@ -174,6 +174,89 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="https://levinhen.github.io/2021/02/28/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93-C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levinhen">
+      <meta itemprop="description" content="GOD'S IN HIS HEAVEN, ALL'S RIGHT WITH THE WORLD.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/28/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93-C/" class="post-title-link" itemprop="url">常用库函数总结(C++)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-02-28 20:50:08" itemprop="dateCreated datePublished" datetime="2021-02-28T20:50:08+08:00">2021-02-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-01 20:39:14" itemprop="dateModified" datetime="2021-03-01T20:39:14+08:00">2021-03-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>以后会在这里记录常用的库函数，免得再重做轮子了。</p>
+<h4 id="STL-STL源码剖析记得看"><a href="#STL-STL源码剖析记得看" class="headerlink" title="STL(STL源码剖析记得看)"></a>STL(STL源码剖析记得看)</h4><ul>
+<li><code>switch</code>语句只判断整型数据类型的变量(包括<code>char</code>)</li>
+<li><code>string</code>:<ul>
+<li><code>stoi()</code>与<code>atoi()</code>都是将字符串转换成<code>int</code>类型进行输出的，不同的地方在于<code>atoi()</code>需要<code>const cahr*</code>，而<code>stoi()</code>需要<code>const string*</code>。因此，使用atoi的时候还需要再加一句<code>c_str()</code>将string类型转换为<code>const char*</code>类型的。</li>
+</ul>
+</li>
+</ul>
+<h4 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h4><h4 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h4><ul>
+<li><code>front()</code>：在<code>stack</code>中的<code>top()</code>函数在<code>queue</code>中为<code>front()</code>函数</li>
+<li></li>
+</ul>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h4 id="hash-map-unordered-map"><a href="#hash-map-unordered-map" class="headerlink" title="hash_map == unordered_map"></a>hash_map == unordered_map</h4><h4 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h4><ul>
+<li>使用<code>stringstream + getline</code>来分割字符串<ul>
+<li><code>stringstream</code>是流的输入输出操作，定义于<code>&lt;sstream&gt;</code>中。主要用来进行数据类型转换，避免缓冲区溢出，也不会存在错误的格式化符。</li>
+<li><code>getline</code>原本是用于读取整行数据的，但是用于此处刚好也能用于分隔字符串。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh_CN">
     <link itemprop="mainEntityOfPage" href="https://levinhen.github.io/2021/02/03/%E7%AE%97%E6%B3%95%E9%A2%98%E5%B0%8F%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -205,7 +288,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-02-24 11:16:31" itemprop="dateModified" datetime="2021-02-24T11:16:31+08:00">2021-02-24</time>
+                <time title="Modified: 2021-03-03 13:47:56" itemprop="dateModified" datetime="2021-03-03T13:47:56+08:00">2021-03-03</time>
               </span>
 
           
@@ -249,6 +332,20 @@
 <p>当前位置，左边的最高高度，是前一个位置的最高高度和本高度的最大值。<br>即从左向右遍历：<code>maxLeft[i] = max(height[i], maxLeft[i - 1]);</code><br>从右向左遍历：<code>maxRight[i] = max(height[i], maxRight[i + 1]);</code><br>这样就找到递推公式。</p>
 <p>三、单调递减栈</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">trap</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;height)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; <span class="built_in">stack</span>;</span><br><span class="line">		<span class="built_in">stack</span>.push(<span class="number">0</span>);</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; height.size(); i++) &#123;</span><br><span class="line">			<span class="keyword">while</span> (!<span class="built_in">stack</span>.empty() &amp;&amp; height[i] &gt; height[<span class="built_in">stack</span>.top()]) &#123;</span><br><span class="line">				<span class="keyword">int</span> mid = <span class="built_in">stack</span>.top();</span><br><span class="line">				<span class="built_in">stack</span>.pop();</span><br><span class="line">				<span class="keyword">if</span> (!<span class="built_in">stack</span>.empty()) &#123;</span><br><span class="line">					<span class="keyword">int</span> h = min(height[i], height[<span class="built_in">stack</span>.top()]) - height[mid];</span><br><span class="line">					<span class="keyword">int</span> w = i - <span class="built_in">stack</span>.top() - <span class="number">1</span>;</span><br><span class="line">					sum += h * w;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">stack</span>.push(i);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> sum;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="简化路径"><a href="#简化路径" class="headerlink" title="简化路径"></a>简化路径</h4><p>想到使用栈去存储路径，但是其实用vector会更快，而且时间也更短。而且，可以使用 stringstream + getline 来分割字符串。</p>
+<h4 id="区域和检索-数组不可变"><a href="#区域和检索-数组不可变" class="headerlink" title="区域和检索 - 数组不可变"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/range-sum-query-immutable/">区域和检索 - 数组不可变</a></h4><p>一道很简单的题目，即使暴力也只有*O(n)<em>的时间复杂度，但是能够通过使用前缀和缩短至</em>O(1)*的时间复杂度。而且，我还看到一个关于分块的思想，在这里显然分块是没有用的，但是当数组需要修改其中一个值的时候，没有分块的话就需要修改整张前缀表，但是分块之后就只需要修改当前所在块。</p>
+<h4 id="滑动窗口最大值"><a href="#滑动窗口最大值" class="headerlink" title="滑动窗口最大值"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/sliding-window-maximum/">滑动窗口最大值</a></h4><p>在这一道题目中，我通过<code>deque</code>实现了单调队列，在我的理解范围内，这个偏向于是一种滚动的队列。</p>
+<p>设计单调队列的时候，pop，和push操作要保持如下规则：</p>
+<ol>
+<li>pop(value)：如果窗口移除的元素value等于单调队列的出口元素，那么队列弹出元素，否则不用任何操作</li>
+<li>push(value)：如果push的元素value大于入口元素的数值，那么就将队列入口的元素弹出，直到push元素的数值小于等于队列入口元素的数值为止</li>
+</ol>
+<p>保持如上规则，每次窗口移动的时候，只要问que.front()就可以返回当前窗口的最大值。</p>
+<h4 id="比特位计数"><a href="#比特位计数" class="headerlink" title="比特位计数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/counting-bits/">比特位计数</a></h4><p>学到了布赖恩·克尼根算法(Brian Kernighan Algorithm)，本质上就是用<code>i&amp;(i-1)</code>刚好每次都比<code>i</code>的二进制数少1，上代码。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">countBits</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">result</span><span class="params">(num + <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">        <span class="keyword">int</span> count;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= num; i++) &#123;</span><br><span class="line">            count = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (i &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                i = i &amp; (i - <span class="number">1</span>);</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">            result[i] = count;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">作者：threesr</span><br><span class="line">链接：https:<span class="comment">//leetcode-cn.com/problems/counting-bits/solution/c-bu-lai-en-ke-ni-gen-suan-fa-dong-tai-g-17ym/</span></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+<p>然后结合DP的思想，就会得到一个更快的算法，这其中<code>i &amp; (i - 1)是比i的二进制少一个1的数值，这个数值对应的1的个数加1就是i对应的1的个数。</code>是关键所在。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">countBits</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">result</span><span class="params">(num + <span class="number">1</span>)</span></span>;</span><br><span class="line">        result[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; num + <span class="number">1</span>; i++)&#123;</span><br><span class="line">            result[i] = result[i &amp; (i - <span class="number">1</span>)] + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -298,7 +395,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-02-19 00:19:10" itemprop="dateModified" datetime="2021-02-19T00:19:10+08:00">2021-02-19</time>
+                <time title="Modified: 2021-03-03 10:26:43" itemprop="dateModified" datetime="2021-03-03T10:26:43+08:00">2021-03-03</time>
               </span>
 
           
@@ -320,6 +417,26 @@
 <p>5、在直接将字符数组中的数字转换成int型需要减一个<code>&#39;0&#39;</code>,这个是减去字符0的ascii码。</p>
 <p>6、C++ STL库里的Partition函数与快速排序还是有点差别的。</p>
 <p>7、<code>vector&lt;vector&lt;int&gt;&gt; matrix = &#123;&#123;&#125;&#125;;</code>如果直接使用<code>matrix.empty()</code>判断为非空。</p>
+<p>8、日常使用的STL其实是经历过三版变化的。</p>
+<ul>
+<li>HP STL<ul>
+<li>是C++最早的开源STL，以后的STL也是以HP STL为蓝本的。</li>
+<li>日常使用的并不是最早的版本。</li>
+</ul>
+</li>
+<li>P.J.Plauger STL<ul>
+<li>由P.J.Plauger参照HP STL实现出来的，被Visual C++编译器所采用，不是开源的。</li>
+</ul>
+</li>
+<li>SGI STL<ul>
+<li>日常使用的STL，由Silicon Graphics Computer Systems公司参照HP STL实现，被Linux的C++编译器GCC所采用，SGI STL是开源软件，源码可读性甚高。</li>
+</ul>
+</li>
+</ul>
+<p>9、栈和队列的底层实现(日后要把这一条搬一下位置，再把其他的底层实现都看一遍)</p>
+<p>栈和队列的底层实现可以选用<code>deque</code>、<code>vector</code>、<code>list</code>，一般默认情况下都是使用<code>deque</code>，只需要将这种双端队列其中一端封住就可以了。</p>
+<p>也因此，<code>stack</code>和<code>queue</code>并不属于容器，他们属于容器适配器。</p>
+<p>10、</p>
 
       
     </div>
@@ -697,7 +814,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -752,7 +869,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.2k字</span>
+  <span class="post-count">博客全站共5.3k字</span>
 </div>
 
         
