@@ -30,7 +30,7 @@
 <meta property="og:description" content="C++相关知识在做题的时候是Java和C++都有的，故复习一下C++。 1、箭头运算符和点运算符，点运算符的左侧对象为实例，箭头运算符为指针。 2、使用new初始化char[]的时候要+1，给\0预留位置。 3、在合并两个数组的时候，从前往后复制往往需要移动多次，但是从后往前移动就没有这种烦恼。 4、很显然的，在计算时少用乘除法，多用位运算，数学上等价的运算，效率上却有着千差万别。 5、在直接将字">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-03T06:19:49.000Z">
-<meta property="article:modified_time" content="2021-03-03T02:26:43.380Z">
+<meta property="article:modified_time" content="2021-03-08T02:58:21.990Z">
 <meta property="article:author" content="Levinhen">
 <meta property="article:tag" content="NexT">
 <meta name="twitter:card" content="summary">
@@ -207,7 +207,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-03 10:26:43" itemprop="dateModified" datetime="2021-03-03T10:26:43+08:00">2021-03-03</time>
+                <time title="Modified: 2021-03-08 10:58:21" itemprop="dateModified" datetime="2021-03-08T10:58:21+08:00">2021-03-08</time>
               </span>
 
           
@@ -248,7 +248,8 @@
 <p>9、栈和队列的底层实现(日后要把这一条搬一下位置，再把其他的底层实现都看一遍)</p>
 <p>栈和队列的底层实现可以选用<code>deque</code>、<code>vector</code>、<code>list</code>，一般默认情况下都是使用<code>deque</code>，只需要将这种双端队列其中一端封住就可以了。</p>
 <p>也因此，<code>stack</code>和<code>queue</code>并不属于容器，他们属于容器适配器。</p>
-<p>10、</p>
+<p>10、NULL实际上是int类型，值为0，因为怕它具有二义性，而nullptr才是真正的空指针。</p>
+<p>11、对一个已经为空的容器或者其他数据结构类型使用类似于pop的操作是不行的，需要在回溯法中注意这一点。</p>
 
     </div>
 
@@ -398,7 +399,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.3k字</span>
+  <span class="post-count">博客全站共6k字</span>
 </div>
 
         
