@@ -347,7 +347,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-19 20:36:53" itemprop="dateModified" datetime="2021-03-19T20:36:53+08:00">2021-03-19</time>
+                <time title="Modified: 2021-07-11 10:02:32" itemprop="dateModified" datetime="2021-07-11T10:02:32+08:00">2021-07-11</time>
               </span>
 
           
@@ -412,6 +412,10 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> res = nums.size();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= nums.size()<span class="number">-1</span>; ++i)    </span><br><span class="line">	res ^= nums[i] ^ i;</span><br><span class="line"><span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">作者：zrita</span><br><span class="line">链接：https:<span class="comment">//leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/solution/4xing-cyi-huo-z-by-zrita-ibgk/</span></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
 <h4 id="剑指-Offer-64-求1-2-…-n"><a href="#剑指-Offer-64-求1-2-…-n" class="headerlink" title="剑指 Offer 64. 求1+2+…+n"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/qiu-12n-lcof/">剑指 Offer 64. 求1+2+…+n</a></h4><p>方法都很巧妙，比如说直接计算递推公式的和(使用内存进行计算)<code>sizeof(bool a[n][n - 1])&gt;&gt;1;</code></p>
 <p>以及用逻辑短路来终止递归<code>n &amp;&amp; (n += sumNums(n-1));</code></p>
+<h4 id="重复的子字符串"><a href="#重复的子字符串" class="headerlink" title="重复的子字符串"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/repeated-substring-pattern/">重复的子字符串</a></h4><p>是一道典型的KMP问题，但是能把代码写的简单又优美，一行就能搞定。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">repeatedSubstringPattern</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (s + s).find(s, <span class="number">1</span>) != s.size();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">作者：da-li-wang</span><br><span class="line">链接：https:<span class="comment">//leetcode-cn.com/problems/repeated-substring-pattern/solution/c-yi-xing-ti-jie-by-da-li-wang-3/</span></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+
+
 
       
     </div>
@@ -938,7 +942,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共6.3k字</span>
+  <span class="post-count">博客全站共6.4k字</span>
 </div>
 
         
