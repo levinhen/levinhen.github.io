@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/02/06/E5o1BhRjvaeVMit.png">
 <meta property="og:image" content="https://i.loli.net/2021/02/24/WFIejOzPrHUCxLR.png">
 <meta property="article:published_time" content="2021-02-03T13:26:41.000Z">
-<meta property="article:modified_time" content="2021-07-11T02:02:32.990Z">
+<meta property="article:modified_time" content="2021-07-11T02:11:03.630Z">
 <meta property="article:author" content="Levinhen">
 <meta property="article:tag" content="NexT">
 <meta name="twitter:card" content="summary">
@@ -210,7 +210,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-07-11 10:02:32" itemprop="dateModified" datetime="2021-07-11T10:02:32+08:00">2021-07-11</time>
+                <time title="Modified: 2021-07-11 10:11:03" itemprop="dateModified" datetime="2021-07-11T10:11:03+08:00">2021-07-11</time>
               </span>
 
           
@@ -246,7 +246,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>: </span><br><span class="line">    Node* head, *tail;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">Node* <span class="title">treeToDoublyList</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        inorder(root); </span><br><span class="line">        head -&gt; left = tail; </span><br><span class="line">        tail -&gt; right = head; </span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">inorder</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root) <span class="keyword">return</span>;</span><br><span class="line">        inorder(root -&gt; left);</span><br><span class="line">        <span class="keyword">if</span>(!tail) &#123;</span><br><span class="line">            head = root;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            tail -&gt; right = root;</span><br><span class="line">            root -&gt; left = tail;</span><br><span class="line">        &#125;</span><br><span class="line">        tail = root;</span><br><span class="line">        inorder(root -&gt; right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h4 id="A-star-寻路算法"><a href="#A-star-寻路算法" class="headerlink" title="A-star 寻路算法"></a>A-star 寻路算法</h4><p>虽然不知道能不能算在算法题里面，但是就这么算了，事实上关于A星寻路算法，理解挺简单的。具体可以参考<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/65282bd32391">A-star</a>，然后是网友做出来的一个<a target="_blank" rel="noopener" href="https://anseyuyin.github.io/AStar-Process/demo">算法可视化</a>。</p>
 <p>感觉算法总体有一些优化空间，但是我暂时优化不出来，具体是关于怎么使用地图的整体。</p>
-<h4 id="接雨水"><a href="#接雨水" class="headerlink" title="接雨水"></a>接雨水</h4><p>这个题目挺有趣的，第一个做法暴力解法超时了，看题解发现有三种方法可以做出来，这里只贴出我使用的单挑递减栈的代码。</p>
+<h4 id="接雨水"><a href="#接雨水" class="headerlink" title="接雨水"></a>接雨水</h4><p>这个题目挺有趣的，第一个做法暴力解法超时了，看题解发现有三种方法可以做出来，这里只贴出我使用的单调递减栈的代码。</p>
 <p>一、双指针</p>
 <p><img src="https://i.loli.net/2021/02/24/WFIejOzPrHUCxLR.png" alt="1614045759-jjZdVw-file_1614045758988.png"></p>
 <p>在每一列寻找左侧最高柱与右侧最高柱，比较两者中的最小值再减去本列的高度乘以宽度1就是本列的雨水蓄积量了。</p>
@@ -273,10 +273,11 @@
 <p>然后<code>solveSudoku</code>初始化<code>bitset</code>的状态，作为函数主体的<code>dfs</code>就是回溯算法的主体了。<code>fillNum</code>的写法也非常巧妙，用以更新<code>bitset</code>的状态。</p>
 <h4 id="剑指-Offer-53-II-0～n-1中缺失的数字"><a href="#剑指-Offer-53-II-0～n-1中缺失的数字" class="headerlink" title="剑指 Offer 53 - II. 0～n-1中缺失的数字"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/">剑指 Offer 53 - II. 0～n-1中缺失的数字</a></h4><p>考虑变式问题，如果题目给出的不是有序排列，那么就需要对整个无序数列进行异或，相同的数字异或会得到 000，最后剩下的就是所缺失的那个数字了。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> res = nums.size();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= nums.size()<span class="number">-1</span>; ++i)    </span><br><span class="line">	res ^= nums[i] ^ i;</span><br><span class="line"><span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">作者：zrita</span><br><span class="line">链接：https:<span class="comment">//leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/solution/4xing-cyi-huo-z-by-zrita-ibgk/</span></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
-<h4 id="剑指-Offer-64-求1-2-…-n"><a href="#剑指-Offer-64-求1-2-…-n" class="headerlink" title="剑指 Offer 64. 求1+2+…+n"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/qiu-12n-lcof/">剑指 Offer 64. 求1+2+…+n</a></h4><p>方法都很巧妙，比如说直接计算递推公式的和(使用内存进行计算)<code>sizeof(bool a[n][n - 1])&gt;&gt;1;</code></p>
+<h4 id="剑指-Offer-64-求1-2-…-n"><a href="#剑指-Offer-64-求1-2-…-n" class="headerlink" title="剑指 Offer 64. 求1+2+…+n"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/qiu-12n-lcof/">剑指 Offer 64. 求1+2+…+n</a></h4><p>方法都很巧妙，比如说直接计算递推公式的和(使用内存进行计算)<code>sizeof(bool a[n][n - 1]) &gt;&gt; 1;</code></p>
 <p>以及用逻辑短路来终止递归<code>n &amp;&amp; (n += sumNums(n-1));</code></p>
 <h4 id="重复的子字符串"><a href="#重复的子字符串" class="headerlink" title="重复的子字符串"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/repeated-substring-pattern/">重复的子字符串</a></h4><p>是一道典型的KMP问题，但是能把代码写的简单又优美，一行就能搞定。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">repeatedSubstringPattern</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (s + s).find(s, <span class="number">1</span>) != s.size();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">作者：da-li-wang</span><br><span class="line">链接：https:<span class="comment">//leetcode-cn.com/problems/repeated-substring-pattern/solution/c-yi-xing-ti-jie-by-da-li-wang-3/</span></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 稍微解释一下，防止我忘了。</span></span><br><span class="line"><span class="built_in">string</span> s = aaaa;</span><br><span class="line">s + s = aaaa aaaa;</span><br><span class="line">find(aaa aaaa) != s.size();</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">string</span> s = abcd) &#123;</span><br><span class="line">    s + s = abcd abcd;</span><br><span class="line">    find(bcd abcd) == s.size();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -373,7 +374,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -428,7 +429,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共6.4k字</span>
+  <span class="post-count">博客全站共6.6k字</span>
 </div>
 
         
