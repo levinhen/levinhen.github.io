@@ -6,7 +6,7 @@
   <link href="https://levinhen.github.io/atom.xml" rel="self"/>
   
   <link href="https://levinhen.github.io/"/>
-  <updated>2021-07-19T13:33:37.181Z</updated>
+  <updated>2021-07-19T14:06:12.863Z</updated>
   <id>https://levinhen.github.io/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://levinhen.github.io/2021/08/16/hello-world/"/>
+    <id>https://levinhen.github.io/2021/08/16/hello-world/</id>
+    <published>2021-08-16T02:26:47.206Z</published>
+    <updated>2021-07-19T14:06:12.863Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="写在最前面"><a href="#写在最前面" class="headerlink" title="写在最前面"></a>写在最前面</h2><hr><h3 id="记录在blog创建过程中出现的问题"><a href="#记录在blog创建过程中出现的问题" class="headerlink" title="记录在blog创建过程中出现的问题"></a>记录在blog创建过程中出现的问题</h3><p>首先，当然是blog的创立，我参考了很多，最后决定使用github的github pages服务，具体则是依靠Hexo建立的站点。</p><p>github pages可以使用Git来控制，不得不说这是相当方便了。</p><p>使用Hexo的过程在这：</p><p><code>npm install -g hexo-cli</code>  在这里可以选择是否局部安装<code>hexo</code>包</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>就几句简单的命令而已，随后再安装<code>hexo</code>的<code>git</code>安装包部分就完全OK了。之后的步骤就是配置：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: https:&#x2F;&#x2F;github.com&#x2F;levinhen&#x2F;levinhen.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure><p>我是认为只需要将网站文件夹放到<code>master branch</code>就好了，<del>反正也不会去看repository不是吗?</del></p><p>至于后面的问题，关于主题更换、搜索栏、还有一些使用方法的记录，<del>等我想起来的时候再整吧。</del></p><p>2021.7忙完回来更新时发现首页不更新了，于是搜索发现需要清除缓存再生成</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><h3 id="过程中间关于使用ssh与github建立连接的问题"><a href="#过程中间关于使用ssh与github建立连接的问题" class="headerlink" title="过程中间关于使用ssh与github建立连接的问题"></a>过程中间关于使用ssh与github建立连接的问题</h3><p>我在过程当中不知道为什么走岔路去使用ssh连接github了，看<a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh">官方文档</a>就能解决绝大部分问题了。我在将ssh秘钥添加到ssh-agent的时候后曾经有一个小问题：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Could not open a connection to your authentication agent</span><br><span class="line">只需要执行下列语句就可以顺利添加了：</span><br><span class="line">ssh-agent bash</span><br></pre></td></tr></table></figure><p>在中间，我的<code>git bash</code>的home位置不知道为什么是我之前做数电实验的<code>cadence</code>那儿，很奇怪。</p><h3 id="“生活小妙招”"><a href="#“生活小妙招”" class="headerlink" title="“生活小妙招”"></a>“生活小妙招”</h3><p>顺便记录一下“生活小妙招”，</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">有一些文件删不掉，需要权限，只需要移动到C盘的&#96;Program Files&#96;就可以直接删掉了</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;写在最前面&quot;&gt;&lt;a href=&quot;#写在最前面&quot; class=&quot;headerlink&quot; title=&quot;写在最前面&quot;&gt;&lt;/a&gt;写在最前面&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&quot;记录在blog创建过程中出现的问题&quot;&gt;&lt;a href=&quot;#记录在blog创建过程中出现的问题&quot; </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>项目记录</title>
     <link href="https://levinhen.github.io/2021/07/11/%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/"/>
     <id>https://levinhen.github.io/2021/07/11/%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/</id>
     <published>2021-07-11T02:04:04.000Z</published>
-    <updated>2021-07-19T13:33:37.181Z</updated>
+    <updated>2021-08-11T13:28:11.079Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="⑦月"><a href="#⑦月" class="headerlink" title="⑦月"></a>⑦月</h2><p>我在7月以实习生的身份入职了华为。现在在保证信息安全的前提下，准备在这里记录我的项目经验。</p><p>负责按照资源全局最优方案完成优化PPA报文分析工具。</p><p>刚开始上手后发现在原本工具上进行优化效率不高，于是着手重构。现在相比于初始版本实现了主要逻辑的分离，模块解耦并且更改了设计方案，以资源全局最优的方案完成了工具的主体，工具能正常输出文档。下一步计划重新设计架构并添加资源报警和优化DAG图的功能。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="⑦月"><a href="#⑦月" class="headerlink" title="⑦月"></a>⑦月</h2><p>我在7月以实习生的身份入职了华为。现在在保证信息安全的前提下，准备在这里记录我的项目经验。</p><p>负责按照资源全局最优方案完成优化PPA报文分析工具。</p><p>刚开始上手后发现在原本工具上进行优化效率不高，于是着手重构。现在相比于初始版本实现了主要逻辑的分离，模块解耦并且更改了设计方案，以资源全局最优的方案完成了工具的主体，工具能正常输出文档。下一步计划重新设计架构并添加资源报警和优化DAG图的功能。</p><p>到了该做总结的时候了，这一个月我所做的任务，所输出的文档其实在公司的月度答辩里都有体现。但是为了保护公司信息安全，所以也带不出来。</p><ul><li>完成了PPA报文解析工具的开发，输出了一些诸如工具开发流程的文档</li><li>给PPA报文解析工具添加了一些新功能(输出包含stage_id的有向无环图，超过资源红线时进行报错)</li><li>自主提出并实现了性能分析工具</li></ul><h2 id="⑧月"><a href="#⑧月" class="headerlink" title="⑧月"></a>⑧月</h2><p>不知不觉已经到了八月中旬了，我马上也将从目前的这个岗位上离职了，噢，应该说离司。</p><p>其实在开发的过程中很容易发现，想开发一个全局最优方案并不是一件易事，项目的复杂度十分的高，达到了惊人的<code>O((m!)^n)</code>虽然<code>m</code>是一个有取值范围的数值，但是仍然不是一件容易的事情。说好的优化方案，本来是想用动态规划，后来发现因为后效性的问题，需要消除后效性的话其实需要增加动态规划数组的维度，但是增加维度的数量到达了<code>n</code>的数量级，所以最后也就不得不放弃了。</p><p>最后是开发了一个较优的方案，以及一个暴力的方案，但是暴力的方案一开始是想递归的，一分析问题规模就发现递归很容易就造成了栈溢出。于是乎，想到用迭代代替递归，但是说起来容易，做起来难，事实证明，有些递归的方案就是没有办法用迭代去替代的，所以最后还是选用了用栈模拟递归。</p>]]></content>
     
     
       
@@ -42,11 +63,22 @@
     <link href="https://levinhen.github.io/2021/04/04/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F/"/>
     <id>https://levinhen.github.io/2021/04/04/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F/</id>
     <published>2021-04-04T07:34:02.000Z</published>
-    <updated>2021-04-04T07:34:02.558Z</updated>
+    <updated>2021-08-11T13:30:57.005Z</updated>
+    
+    <content type="html"><![CDATA[<p>写在前面，其实所谓的游戏编程模式也不过是设计模式在游戏编程的应用罢了。</p><p>时隔蛮久，又回来捡起这一部分的内容了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;写在前面，其实所谓的游戏编程模式也不过是设计模式在游戏编程的应用罢了。&lt;/p&gt;
+&lt;p&gt;时隔蛮久，又回来捡起这一部分的内容了。&lt;/p&gt;
+</summary>
+      
     
     
     
     
+    <category term="设计模式" scheme="https://levinhen.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -96,7 +128,7 @@
     <link href="https://levinhen.github.io/2021/02/03/C-%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
     <id>https://levinhen.github.io/2021/02/03/C-%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/</id>
     <published>2021-02-03T06:19:49.000Z</published>
-    <updated>2021-03-15T11:54:43.132Z</updated>
+    <updated>2021-08-11T13:30:02.073Z</updated>
     
     <content type="html"><![CDATA[<h2 id="C-相关知识"><a href="#C-相关知识" class="headerlink" title="C++相关知识"></a>C++相关知识</h2><p>在做题的时候是Java和C++都有的，故复习一下C++。</p><p>1、箭头运算符和点运算符，点运算符的左侧对象为实例，箭头运算符为指针。</p><p>2、使用new初始化char[]的时候要+1，给<code>\0</code>预留位置。</p><p>3、在合并两个数组的时候，从前往后复制往往需要移动多次，但是从后往前移动就没有这种烦恼。</p><p>4、很显然的，在计算时少用乘除法，多用位运算，数学上等价的运算，效率上却有着千差万别。</p><p>5、在直接将字符数组中的数字转换成int型需要减一个<code>&#39;0&#39;</code>,这个是减去字符0的ascii码。</p><p>6、C++ STL库里的Partition函数与快速排序还是有点差别的。</p><p>7、<code>vector&lt;vector&lt;int&gt;&gt; matrix = &#123;&#123;&#125;&#125;;</code>如果直接使用<code>matrix.empty()</code>判断为非空。</p><p>8、日常使用的STL其实是经历过三版变化的。</p><ul><li>HP STL<ul><li>是C++最早的开源STL，以后的STL也是以HP STL为蓝本的。</li><li>日常使用的并不是最早的版本。</li></ul></li><li>P.J.Plauger STL<ul><li>由P.J.Plauger参照HP STL实现出来的，被Visual C++编译器所采用，不是开源的。</li></ul></li><li>SGI STL<ul><li>日常使用的STL，由Silicon Graphics Computer Systems公司参照HP STL实现，被Linux的C++编译器GCC所采用，SGI STL是开源软件，源码可读性甚高。</li></ul></li></ul><p>9、栈和队列的底层实现(日后要把这一条搬一下位置，再把其他的底层实现都看一遍)</p><p>栈和队列的底层实现可以选用<code>deque</code>、<code>vector</code>、<code>list</code>，一般默认情况下都是使用<code>deque</code>，只需要将这种双端队列其中一端封住就可以了。</p><p>也因此，<code>stack</code>和<code>queue</code>并不属于容器，他们属于容器适配器。</p><p>10、NULL实际上是int类型，值为0，因为怕它具有二义性，而nullptr才是真正的空指针。</p><p>11、对一个已经为空的容器或者其他数据结构类型使用类似于pop的操作是不行的，需要在回溯法中注意这一点。</p><p>12、反斜杠<code>\</code>与斜杆<code>/</code>，在编程中反斜杠是转义字符的起始符号，所以一般使用双反斜杆<code>\\</code>来转义为单反斜杆<code>\</code>。</p>]]></content>
     
@@ -167,27 +199,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;数据结构与算法思想总结&quot;&gt;&lt;a href=&quot;#数据结构与算法思想总结&quot; class=&quot;headerlink&quot; title=&quot;数据结构与算法思想总结&quot;&gt;&lt;/a&gt;数据结构与算法思想总结&lt;/h2&gt;&lt;p&gt;我是跟着邓俊辉老师学习的数据结构与算法，第一次学习真的感觉视野增长了</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://levinhen.github.io/2021/01/14/hello-world/"/>
-    <id>https://levinhen.github.io/2021/01/14/hello-world/</id>
-    <published>2021-01-14T13:21:30.575Z</published>
-    <updated>2021-01-14T14:38:02.861Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="写在最前面"><a href="#写在最前面" class="headerlink" title="写在最前面"></a>写在最前面</h2><hr><h3 id="记录在blog创建过程中出现的问题"><a href="#记录在blog创建过程中出现的问题" class="headerlink" title="记录在blog创建过程中出现的问题"></a>记录在blog创建过程中出现的问题</h3><p>首先，当然是blog的创立，我参考了很多，最后决定使用github的github pages服务，具体则是依靠Hexo建立的站点。</p><p>github pages可以使用Git来控制，不得不说这是相当方便了。</p><p>使用Hexo的过程在这：</p><p><code>npm install -g hexo-cli</code>  在这里可以选择是否局部安装<code>hexo</code>包</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>就几句简单的命令而已，随后再安装<code>hexo</code>的<code>git</code>安装包部分就完全OK了。之后的步骤就是配置：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: https:&#x2F;&#x2F;github.com&#x2F;levinhen&#x2F;levinhen.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure><p>我是认为只需要将网站文件夹放到<code>master branch</code>就好了，<del>反正也不会去看repository不是吗?</del></p><p>至于后面的问题，关于主题更换、搜索栏、还有一些使用方法的记录，<del>等我想起来的时候再整吧。</del></p><h3 id="过程中间关于使用ssh与github建立连接的问题"><a href="#过程中间关于使用ssh与github建立连接的问题" class="headerlink" title="过程中间关于使用ssh与github建立连接的问题"></a>过程中间关于使用ssh与github建立连接的问题</h3><p>我在过程当中不知道为什么走岔路去使用ssh连接github了，看<a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh">官方文档</a>就能解决绝大部分问题了。我在将ssh秘钥添加到ssh-agent的时候后曾经有一个小问题：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Could not open a connection to your authentication agent</span><br><span class="line">只需要执行下列语句就可以顺利添加了：</span><br><span class="line">ssh-agent bash</span><br></pre></td></tr></table></figure><p>在中间，我的<code>git bash</code>的home位置不知道为什么是我之前做数电实验的<code>cadence</code>那儿，很奇怪。</p><h3 id="“生活小妙招”"><a href="#“生活小妙招”" class="headerlink" title="“生活小妙招”"></a>“生活小妙招”</h3><p>顺便记录一下“生活小妙招”，</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">有一些文件删不掉，需要权限，只需要移动到C盘的&#96;Program Files&#96;就可以直接删掉了</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;写在最前面&quot;&gt;&lt;a href=&quot;#写在最前面&quot; class=&quot;headerlink&quot; title=&quot;写在最前面&quot;&gt;&lt;/a&gt;写在最前面&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;记录在blog创建过程中出现的问题&quot;&gt;&lt;a href=&quot;#记录在blog创建过程中出现的问题&quot; </summary>
       
     
     
